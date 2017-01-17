@@ -6,16 +6,16 @@ general:
 checkout:
   post:
     - mkdir -p $HOME/.go_workspace/src/github.com/hashicorp
-    - cd .. && mv vault $HOME/.go_workspace/src/github.com/hashicorp/
+    - ln -s `pwd` $HOME/.go_workspace/src/github.com/hashicorp/
 
 dependencies:
   override:
-    - cd $HOME/.go_workspace/src/github.com/hashicorp/vault && make bootstrap
+    - make bootstrap
 
 compile:
   override:
-    - cd $HOME/.go_workspace/src/github.com/hashicorp/vault && make bin
+    - XC_OS="linux" XC_OSARCH="linux/386 linux/amd64" make bin
 
 test:
   override:
-    - cd $HOME/.go_workspace/src/github.com/hashicorp/vault && make test
+    - make test
