@@ -14,9 +14,9 @@ matrix:
 
 branches:
   only:
-    - master
-    - travis-testing
+    - cotdsa
 
 script:
   - make bootstrap
-  - make test testrace
+  - XC_OS="linux" XC_OSARCH="linux/386 linux/amd64" make bin
+  - make test
