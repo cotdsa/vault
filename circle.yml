@@ -8,6 +8,9 @@ checkout:
     - mkdir -p $HOME/.go_workspace/src/github.com/hashicorp
     - ln -s `pwd` $HOME/.go_workspace/src/github.com/hashicorp/
 
+general:
+  build_dir: $HOME/.go_workspace/src/github.com/hashicorp/vault
+
 dependencies:
   override:
     - make bootstrap
