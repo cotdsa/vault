@@ -9,7 +9,7 @@ checkout:
     - ln -s `pwd` $HOME/.go_workspace/src/github.com/hashicorp/
 
 general:
-  build_dir: $HOME/.go_workspace/src/github.com/hashicorp/vault
+  build_dir: ../.go_workspace/src/github.com/hashicorp/vault
 
 dependencies:
   override:
