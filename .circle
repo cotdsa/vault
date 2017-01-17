@@ -2,3 +2,11 @@ general:
   branches:
     only:
       - cotdsa
+
+dependencies:
+  override:
+    - make bootstrap
+
+test:
+  override:
+    - make test
