@@ -2,6 +2,13 @@ general:
   branches:
     only:
       - cotdsa
+checkout:
+  post:
+    - mkdir -p $HOME/.go_workspace/src/gihub.com/hashicorp
+    - cd .. && mv vault HOME/.go_workspace/src/gihub.com/hashicorp/
+
+general:
+  build_dir: $HOME/.go_workspace/src/gihub.com/hashicorp/vault
 
 dependencies:
   override:
