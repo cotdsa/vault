@@ -18,6 +18,6 @@ branches:
 
 script:
   - make bootstrap
-  - ln -s . vendor/github.com/hashicorp
+  - ln -s . vendor/github.com/hashicorp/vault
   - XC_OS="linux" XC_OSARCH="linux/386 linux/amd64" make bin
   - make test
