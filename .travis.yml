@@ -18,6 +18,7 @@ branches:
 
 script:
   - make bootstrap
-  - ln -s . vendor/github.com/hashicorp/vault
+  = mkdir -p ../../../github.com/hashicorp
+  - ln -s `pwd` ../../../github.com/hashicorp
   - XC_OS="linux" XC_OSARCH="linux/386 linux/amd64" make bin
   - make test
